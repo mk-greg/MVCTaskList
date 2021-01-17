@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Task;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/task',function(){
-
-    $task = [
-        'task_name' => 'First',
-        'task_desc' => 'Task'
-    ];
-
-
-    return $task;
-
-});
+Route::apiResource('/tasks', 'TaskController');
     
